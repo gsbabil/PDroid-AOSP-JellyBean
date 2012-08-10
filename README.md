@@ -1,19 +1,45 @@
+About
+-----
+
 Each [Android][1] application requires a set of [various permissions][2] to be granted when the application installs. Either the user has to accept these permission-requests or the user has to abort installation. In essence, accepting all the permissions requested by an application is the only option left if the user wants to install and use it. Currently there is no way on Android to block access to any permission for an installed application once they are granted. This is where [PDroid][3] comes in.
 
 [PDroid][4] is a privacy preserving application for Android that allows user to block permissions of the installed applications. PDroid has two parts. Simply speaking, the first and the most important part of PDroid modifies the Android framework and core libraries so that the permission requests from the applications can be intercepted and the decision whether to accept or denial can be made by PDroid. On the other hand, the [PDroid user application][5], downloadable from the [Google Play Store][6], provides the user interface so that the user can select, modify, allow or grant permissions of the applications installed on the system.
 
 PDroid patch and the application were originally developed by the [XDA][7] developer "[svyat][8]". The original stable PDroid patch was created for [Gingerbread][9] (Android version 2.3.4). Later it was ported to [Ice Cream Sandwich][10] (Android version 4.0.4) by another XDA developer known as "[pastime1971][11]". My contribution here is the same as what [pastime1971][11] has done for Ice Cream Sandwich. I have ported the PDroid to the latest [Android Jelly Bean][12] (version 4.1.1).
 
-**PDroid with Jelly Bean Build Instructions:**
+Build Instructions
+------------------
 
 The instructions below are for Ubuntu Linux [11]. 
 
- - Initialize your build environment as per [this link][13].
- - Download your Android source as per [this link][14]. Since we will be building Jelly Bean, you need to initialize your repo as `repo init -u https://android.googlesource.com/platform/manifest -b android-4.1.1_r4`. 4.1.1_r4 is the latest revision of Jelly Bean as of now.
+ - Initialize your build environment as per the Android developer's manual on [this link][13].
+ - Download your Android source as per the developer's manual on [this link][14]. Since we will be building Jelly Bean, we need to initialize our repo by doing:
 
- - Download my patch by doing `wget https://github.com/gsbabil/PDroid-AOSP-JellyBean/raw/master/ pdroid-1.32-aosp-4.1.1_rf.diff”`
- - Apply the patch by doing a `patch –p1 < pdroid-1.32-aosp-4.1.1_rf.diff`
- - Now you can start the build by doing a `source build/envsetup.sh; lunch; make;`
+```bash
+  repo init -u https://android.googlesource.com/platform/manifest -b android-4.1.1_r4
+```
+
+4.1.1_r4 is the latest revision of Jelly Bean as of now.
+
+ - Download my patch by doing:
+
+```bash
+  wget https://github.com/gsbabil/PDroid-AOSP-JellyBean/raw/master/pdroid-1.32-aosp-4.1.1_rf.diff
+```
+
+ - Apply the patch by doing:
+
+```
+patch –p1 < pdroid-1.32-aosp-4.1.1_rf.diff
+```
+
+ - Now you can start the build by doing the following: 
+
+```bash
+  source build/envsetup.sh; 
+  lunch; 
+  make;
+```
 
 
 
