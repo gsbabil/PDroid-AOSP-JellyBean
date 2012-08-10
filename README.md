@@ -7,6 +7,8 @@ Each [Android][1] application requires a set of [various permissions][2] to be g
 
 PDroid patch and the application were originally developed by the [XDA][7] developer "[svyat][8]". The original stable PDroid patch was created for [Gingerbread][9] (Android version 2.3.4). Later it was ported to [Ice Cream Sandwich][10] (Android version 4.0.4) by another XDA developer known as "[pastime1971][11]". My contribution here is the same as what [pastime1971][11] has done for Ice Cream Sandwich. I have ported the PDroid to the latest [Android Jelly Bean][12] (version 4.1.1).
 
+I have successfully built and tested this patch with Jelly Bean on Google Nexus S phone and Motorola Xoom tablet. Yet, as always, I take absolutely no responsibility if it breaks your phone. Please use it at your own risk.
+
 Build Instructions
 ------------------
 
@@ -15,14 +17,14 @@ The instructions below are for Ubuntu Linux [11].
  - Initialize your build environment as per the Android developer's manual on [this link][13].
  - Download your Android source as per the developer's manual on [this link][14]. Since we will be building Jelly Bean, we need to initialize our repo by doing the following (4.1.1_r4 is the latest revision of Jelly Bean as of now):.
 
-```bash
+```sh
   repo init -u https://android.googlesource.com/platform/manifest -b android-4.1.1_r4
 ```
 
  - Download my patch by doing:
 
-```bash
-  wget https://github.com/gsbabil/PDroid-AOSP-JellyBean/raw/master/pdroid-1.32-aosp-4.1.1_rf.diff
+```sh
+  wget https://raw.github.com/gsbabil/PDroid-AOSP-JellyBean/master/pdroid-1.32-aosp-4.1.1_r4.diff
 ```
 
  - Apply the patch by doing:
@@ -33,10 +35,10 @@ patch –p1 < pdroid-1.32-aosp-4.1.1_rf.diff
 
  - Now you can start the build by doing the following: 
 
-```bash
+```sh
   source build/envsetup.sh
   lunch 
-  make
+  make $(grep -c 'processor' /proc/cpuinfo)
 ```
 
 
