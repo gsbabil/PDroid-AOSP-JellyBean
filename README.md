@@ -13,13 +13,11 @@ Build Instructions
 The instructions below are for Ubuntu Linux [11]. 
 
  - Initialize your build environment as per the Android developer's manual on [this link][13].
- - Download your Android source as per the developer's manual on [this link][14]. Since we will be building Jelly Bean, we need to initialize our repo by doing:
+ - Download your Android source as per the developer's manual on [this link][14]. Since we will be building Jelly Bean, we need to initialize our repo by doing the following (4.1.1_r4 is the latest revision of Jelly Bean as of now):.
 
 ```bash
   repo init -u https://android.googlesource.com/platform/manifest -b android-4.1.1_r4
 ```
-
-4.1.1_r4 is the latest revision of Jelly Bean as of now.
 
  - Download my patch by doing:
 
@@ -36,9 +34,9 @@ patch –p1 < pdroid-1.32-aosp-4.1.1_rf.diff
  - Now you can start the build by doing the following: 
 
 ```bash
-  source build/envsetup.sh; 
-  lunch; 
-  make;
+  source build/envsetup.sh
+  lunch 
+  make
 ```
 
 
