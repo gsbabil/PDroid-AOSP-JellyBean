@@ -12,7 +12,7 @@ I have successfully built and tested this patch with Jelly Bean on Google Nexus 
 Build Instructions
 ------------------
 
-The instructions below are for Ubuntu Linux [11]. 
+The instructions below are for [Ubuntu Linux][15]. 
 
  - Initialize your build environment as per the Android developer's manual on [this link][13].
  - Download your Android source as per the developer's manual on [this link][14]. Since we will be building Jelly Bean, we need to initialize our repo by doing the following (4.1.1_r4 is the latest revision of Jelly Bean as of now):.
@@ -57,3 +57,4 @@ patch –p1 < pdroid-1.32-aosp-4.1.1_rf.diff
   [12]: http://en.wikipedia.org/wiki/Android_version_history#Android_4.1.x_Jelly_Bean
   [13]: http://source.android.com/source/initializing.html
   [14]: http://source.android.com/source/downloading.html
+  [15]: http://en.wikipedia.org/wiki/Ubuntu_%28operating_system%29
