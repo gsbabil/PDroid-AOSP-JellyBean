@@ -1,5 +1,8 @@
 PDroid (1.32) patch for Android Jelly Bean (AOSP-4.1.1)
-=======================================================
+-------------------------------------------------------
+
+![PDroid with Jelly Bean on Motorolla Xoom](http://3.bp.blogspot.com/-WtdrxNllIxQ/UCsQJKWkEGI/AAAAAAAAC5A/4OkNqPxk7AQ/s1600/device-2012-08-08-202016.png)
+
 
 About
 -----
