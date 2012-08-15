@@ -32,8 +32,8 @@ The instructions below are for [Ubuntu Linux][15].
 
  - Apply the patch by doing:
 
-```
-patch –p1 < pdroid-1.32-aosp-4.1.1_rf.diff
+```sh
+  patch –p1 < pdroid-1.32-aosp-4.1.1_rf.diff
 ```
 
  - Now you can start the build by doing the following: 
