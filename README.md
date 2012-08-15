@@ -1,3 +1,6 @@
+PDroid (1.32) patch for Android Jelly Bean (AOSP-4.1.1)
+=======================================================
+
 About
 -----
 
