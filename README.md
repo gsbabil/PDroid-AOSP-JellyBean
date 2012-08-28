@@ -7,7 +7,7 @@ PDroid (1.32) patch for Android Jelly Bean (AOSP-4.1.1)
 About
 -----
 
-Each [Android][1] application requires a set of [various permissions][2] to be granted when the application installs. Either the user has to accept these permission-requests or the user has to abort installation. In essence, accepting all the permissions requested by an application is the only option left if the user wants to install and use it. Currently there is no way on Android to block access to any permission for an installed application once they are granted. This is where [PDroid][3] comes in.
+Every [Android][1] application requires a set of [various permissions][2] to be granted when the application installs. Either the user has to accept these permission-requests or the user has to abort installation. In essence, accepting all the permissions requested by an application is the only option left if the user wants to install and use it. Currently there is no way on Android to block access to any permission for an installed application once they are granted. This is where [PDroid][3] comes in.
 
 [PDroid][4] is a privacy preserving application for Android that allows user to block permissions of the installed applications. PDroid has two parts. Simply speaking, the first and the most important part of PDroid modifies the Android framework and core libraries so that the permission requests from the applications can be intercepted and the decision whether to accept or denial can be made by PDroid. On the other hand, the [PDroid user application][5], downloadable from the [Google Play Store][6], provides the user interface so that the user can select, modify, allow or grant permissions of the applications installed on the system.
 
