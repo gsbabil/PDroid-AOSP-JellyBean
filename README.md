@@ -25,6 +25,7 @@ The instructions below are for [Ubuntu Linux][15].
 
 ```sh
   repo init -u https://android.googlesource.com/platform/manifest -b android-4.1.1_r4
+  repo sync -j $(grep -c 'processor' /proc/cpuinfo)
 ```
 
  - Download my patch by doing:
@@ -44,7 +45,7 @@ The instructions below are for [Ubuntu Linux][15].
 ```sh
   source build/envsetup.sh
   lunch 
-  make $(grep -c 'processor' /proc/cpuinfo)
+  make -j $(grep -c 'processor' /proc/cpuinfo)
 ```
 
 
